@@ -1,1 +1,8 @@
-# atom
+# Atom
+
+Atom is a simple Polymer like Web Component framework that is developed as part of the [blog post series on creating Lookless Web Components](http://paulmason.co.za/2017/03/18/lookless-web-components-1/). This repository contains the most up to date version, with each step having its own repository.
+
+The parts so far are:
+
+- [Part 1](http://paulmason.co.za/2017/03/18/lookless-web-components-1/) : No repository
+- [Part 2](http://paulmason.co.za/2017/03/18/lookless-web-components-2/) : [Repository](https://github.com/phm-atom/atom-2)
