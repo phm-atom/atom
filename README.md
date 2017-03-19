@@ -8,3 +8,4 @@ The parts so far are:
 - [Part 2](http://paulmason.co.za/2017/03/18/lookless-web-components-2/) : [Repository](https://github.com/phm-atom/atom-2)
 - [Part 3](http://paulmason.co.za/2017/03/19/lookless-web-components-3/) : [Repository](https://github.com/phm-atom/atom-3)
 - [Part 4](http://paulmason.co.za/2017/03/19/lookless-web-components-4/) : [Repository](https://github.com/phm-atom/atom-4)
+- [Part 5](http://paulmason.co.za/2017/03/19/lookless-web-components-5/) : [Repository](https://github.com/phm-atom/atom-5)

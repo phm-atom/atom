@@ -1,3 +1,4 @@
+<script>
 window.Atom = window.Atom || {};
  
 window.Atom.Element = class extends HTMLElement {
@@ -62,15 +63,17 @@ window.Atom.Element = class extends HTMLElement {
     _init () {
         if (this.shadowRoot !== null) { return; }
         
-        if (this.constructor.template) {
-           this.attachShadow({ mode: "open" });
-           this.shadowRoot.innerHTML = this.constructor.template;
-        }
-        else if (this.template) {
-            this.attachShadow({ mode: "open" });
-            this.shadowRoot.innerHTML = this.template;
-        }
+        let doc = (document._currentScript) ? document._currentScript.ownerDocument : document.currentScript.ownerDocument;
+        let template = doc.getElementById(this.constructor.is);
         
+        if (template) {
+            let clone = doc.importNode(template.content, true);
+            this.attachShadow({ mode: "open" });
+
+            let cloneText = new XMLSerializer().serializeToString(clone);
+            this.shadowRoot.innerHTML = eval("`" + cloneText + "`");
+        }
+
         if (this.constructor.properties) {
             Object.getOwnPropertyNames(this.constructor.properties)
                 .forEach(function (prop) {
@@ -104,3 +107,4 @@ window.Atom.Element = class extends HTMLElement {
         }
     }
 }
+</script>
